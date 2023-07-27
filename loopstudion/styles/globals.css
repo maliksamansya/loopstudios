@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+}
+
+#hero {
+  background-image: url("/assets/images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  @apply h-screen;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("/assets/images/mobile/image-hero.jpg");
+    background-position: center;
+    @apply h-screen;
+  }
+}
+
+.item-gradient {
+  @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70;
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+}
+
+#mobile {
+  @apply bg-black h-screen;
+}
